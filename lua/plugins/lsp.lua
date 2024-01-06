@@ -19,7 +19,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "gopls", "clangd" },
+                ensure_installed = { "lua_ls", "gopls","clangd" },
             })
         end,
     },
@@ -28,6 +28,7 @@ return {
         "neovim/nvim-lspconfig",
         lazy = false,
         config = function()
+        
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({
                 Lua = {
@@ -39,6 +40,7 @@ return {
                     },
                 },
             })
+
             lspconfig.clangd.setup({})
             lspconfig.gopls.setup({})
         end,
