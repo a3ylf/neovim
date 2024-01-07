@@ -28,9 +28,11 @@ return {
         "neovim/nvim-lspconfig",
         lazy = false,
         config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
         
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({
+                capabilities = capabilities,
                 Lua = {
                     diagnostics = {
                         globals = { "vim", "lua_ls" },
@@ -41,8 +43,12 @@ return {
                 },
             })
 
-            lspconfig.clangd.setup({})
-            lspconfig.gopls.setup({})
+            lspconfig.clangd.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+            })
         end,
     },
 }
