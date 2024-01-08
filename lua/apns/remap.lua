@@ -1,7 +1,9 @@
-vim.keymap.set("n", "<leader>bb", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>bb", vim.cmd.Ex)
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
+vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, {})
 
 -- hovering and seeing info
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
@@ -31,3 +33,5 @@ vim.keymap.set("n", "<C-i>", function() harpoon:list():select(4) end)
 vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end)
 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })

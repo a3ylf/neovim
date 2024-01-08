@@ -64,7 +64,7 @@ return {
                         }
                     },
                 },
-                lualine_y = { 'progress' },
+                lualine_y = {},
                 lualine_z = { 'location' }
             },
             inactive_sections = {
