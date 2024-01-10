@@ -17,4 +17,4 @@ require("lazy").setup("plugins")
 
 require("apns")
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "tokyodark"
