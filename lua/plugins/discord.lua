@@ -5,7 +5,7 @@ return {
 
 		config = function()
 			require("presence").setup({
-				file_explorer_text = "BROwsing",
+				--file_explorer_text = "BROwsing",
 			})
 		end,
 	},

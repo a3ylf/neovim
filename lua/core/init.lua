@@ -1,4 +1,4 @@
-require("apns.remap")
+require("core.remap")
 
 print("Booting up")
 

@@ -5,6 +5,8 @@ vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
+vim.keymap.set("n", "<leader>y", [["+y]])
+
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
@@ -30,10 +32,10 @@ harpoon:setup()
 vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
 vim.keymap.set("n", "<C-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
-vim.keymap.set("n", "<C-w>", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<C-e>", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<C-y>", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<C-i>", function() harpoon:list():select(4) end)
+vim.keymap.set("n", "<C-w>", function() harpoon:list():select(1) end)
 
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end)
