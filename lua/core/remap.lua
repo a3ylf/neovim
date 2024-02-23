@@ -54,4 +54,3 @@ vim.keymap.set("n", "<leader>ger", "oif err != nil {\n  fmt.Println(err)\n}")
 
 vim.keymap.set('n', '<leader>un', vim.cmd.UndotreeToggle)
 
-vim.keymap.set("i", "", "<Esc>")
