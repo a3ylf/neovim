@@ -4,8 +4,13 @@ vim.keymap.set("n", "j", "jzz")
 vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<#>", "<#>zz")
+vim.keymap.set("n", "<*>", "<*>zz")
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
 
 vim.keymap.set("n", "<leader>y", [["+y]])
+vim.keymap.set("i", "<C-c>", "<Esc>")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -48,3 +53,5 @@ vim.keymap.set("n", "<leader>-", "<CMD>Oil --float<CR>")
 vim.keymap.set("n", "<leader>ger", "oif err != nil {\n  fmt.Println(err)\n}") 
 
 vim.keymap.set('n', '<leader>un', vim.cmd.UndotreeToggle)
+
+vim.keymap.set("i", "", "<Esc>")
