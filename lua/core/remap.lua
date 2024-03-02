@@ -49,7 +49,7 @@ vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end)
 vim.keymap.set("n", "-", "<CMD>Oil<CR>")
 vim.keymap.set("n", "<leader>-", "<CMD>Oil --float<CR>")
 
-vim.keymap.set("n", "<leader>ger", "if err != nil {\n  fmt.Println(err)\n}") --xd
+vim.keymap.set("n", "<leader>ger", "iif err != nil {\n  fmt.Println(err)\n}<Esc>") --xd
 vim.keymap.set('n', '<leader>un', vim.cmd.UndotreeToggle)
 
 vim.keymap.set("n", "<leader>{", "bi{<Esc>wwa}<Esc>")
