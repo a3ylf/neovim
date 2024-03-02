@@ -29,9 +29,9 @@ return {
                     {
                         "diagnostics",
                         symbols = {
-                            error = ' Errors: ',
-                            warn =' Warns: ',
-                            hint = ' Hints: ',
+                            error = 'Err: ',
+                            warn =' Warn: ',
+                            hint = ' Hint: ',
                             info = ' Info:  ',
                         },
                         always_visible = true,
