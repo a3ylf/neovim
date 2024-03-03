@@ -41,7 +41,7 @@ return {
                             warn  = 'DiagnosticWarn',
                             info  = 'DiagnosticInfo',
                             hint  = 'DiagnosticHint',
-                        },
+                        }
                     },
                 },
                 lualine_c = {},
