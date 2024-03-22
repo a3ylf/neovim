@@ -1,3 +1,4 @@
 return {
-	"tiagovla/tokyodark.nvim",
+  "tiagovla/tokyodark.nvim",
+  -- ITS TOKYODARK AND NOT TOKYONIGHT IM SORRY
 }
