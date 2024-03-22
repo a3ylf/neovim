@@ -1,9 +1,10 @@
 return {
     "nvim-lualine/lualine.nvim",
     lazy = false,
+    event = "VeryLazy",
+  -- NO ICONS, I DO NOT NEED ICONS PLEASE NO ICONS
     config = function()
         local lualine = require("lualine")
-
         local opts = {
             options = {
                 icons_enabled = true,
@@ -25,25 +26,22 @@ return {
             },
             sections = {
                 lualine_a = { 'mode' },
-                lualine_b = { 'branch', 'diff',
-                    {
-                        "diagnostics",
+                lualine_b = { {'branch', icon = ""}, 'diff',{'diagnostics',
                         symbols = {
-                            error = 'Err: ',
-                            warn =' Warn: ',
-                            hint = ' Hint: ',
-                            info = ' Info:  ',
+                            error = 'E: ',
+                            warn = 'W: ',
+                            hint = 'H: ',
+                            info = 'I: ',
                         },
-                        always_visible = true,
-                        colored = true,
                         diagnostics_color = {
-                            error = 'DiagnosticError',
+                           error = 'DiagnosticError',
                             warn  = 'DiagnosticWarn',
                             info  = 'DiagnosticInfo',
                             hint  = 'DiagnosticHint',
-                        }
+                                                    },
                     },
                 },
+
                 lualine_c = {},
                 lualine_x = {
                     {
