@@ -1,4 +1,11 @@
 return {
-  "tiagovla/tokyodark.nvim",
-  -- ITS TOKYODARK AND NOT TOKYONIGHT IM SORRY
+  {
+    "tiagovla/tokyodark.nvim",
+    opts = {
+    },
+    config = function(_, opts)
+        require("tokyodark").setup(opts) -- calling setup is optional
+        vim.cmd [[colorscheme tokyodark]]
+    end,
+}  -- ITS TOKYODARK AND NOT TOKYONIGHT IM SORRY
 }

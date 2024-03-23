@@ -16,7 +16,7 @@ vim.opt.backup = false
 vim.opt.smartindent = true
 vim.opt.copyindent = true
 
-vim.opt.colorcolumn = "81" 
+vim.opt.colorcolumn = "81"
 vim.opt.wrap = true
 
-vim.opt.cursorline = true 
+vim.opt.cursorline = true
