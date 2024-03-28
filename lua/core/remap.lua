@@ -1,7 +1,7 @@
 --vim.keymap.set("n", "<leader>bb", vim.cmd.Ex)
 
-vim.keymap.set("n", "j", "jzz")
-vim.keymap.set("n", "k", "kzz")
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<#>", "<#>zz")
