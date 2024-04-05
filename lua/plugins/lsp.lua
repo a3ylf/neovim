@@ -14,19 +14,34 @@ return {
             })
         end,
     },
+    {
+        'WhoIsSethDaniel/mason-tool-installer.nvim',
+    config = function()
+require('mason-tool-installer').setup({
+  -- Install these linters, formatters, debuggers automatically
+  ensure_installed = {
+    'black',
+    'mypy',
+    'pylint',
+    'stylua',
+      },
+    })
+        end,
+    },
 
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "gopls","clangd" },
+                ensure_installed = { "lua_ls", "gopls","clangd","pyright"},
             })
         end,
     },
 
     {
         "neovim/nvim-lspconfig",
-        lazy = false,
+        event = {"BufReadPre","BufNewFile"},
+
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -35,7 +50,7 @@ return {
                 capabilities = capabilities,
                 Lua = {
                     diagnostics = {
-                        globals = { "vim", "lua_ls" },
+                        globals = { 'vim', 'lua_ls' },
                         disable = {
                             "lowercase-global",
                         },
@@ -49,6 +64,9 @@ return {
             lspconfig.gopls.setup({
                 capabilities = capabilities,
             })
-        end,
+            lspconfig.pyright.setup({
+                capabilities = capabilities,
+            })
+            end,
     },
 }
