@@ -28,6 +28,10 @@ return {
 				path = "/mnt/c/Users/alexa/Documents/vaults/work",
 			},
 		},
+		notes_subdir = "notes",
+		daily_notes =  {
+            folder = "notes/daily",
+            },
 
 		-- see below for full list of options 👇
 	},
