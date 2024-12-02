@@ -18,6 +18,7 @@ return {
 		rename = { enabled = false },
 		profiler = { enabled = false },
 		lazygit = {configure = false,},
+		win = {enabled = false}
 
 	},
 	keys = {
