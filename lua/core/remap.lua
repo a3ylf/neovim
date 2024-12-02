@@ -23,7 +23,6 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
 vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-
 vim.keymap.set("n", "<F3>", vim.lsp.buf.rename, {})
 
 vim.keymap.set("n", "<leader>gs", "<cmd>Git<cr>", { desc = "Git Status" })
