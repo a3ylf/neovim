@@ -1,12 +1,12 @@
-    return {
-  {
-    "tiagovla/tokyodark.nvim",
-    opts = {
-      disable_background = true
+return {
+{
+  "folke/tokyonight.nvim",
+  opts = {
+    transparent = true,
+    styles = {
+      sidebars = "transparent",
+      floats = "transparent",
     },
-    config = function(_, opts)
-        require("tokyodark").setup(opts) -- calling setup is optional
-        vim.cmd [[colorscheme tokyodark]]
-    end,
-}, -- ITS TOKYODARK AND NOT TOKYONIGHT IM SORRY 
+  },
+},
 }

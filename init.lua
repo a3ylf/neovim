@@ -17,4 +17,6 @@ require("lazy").setup("plugins")
 
 require("core")
 
-vim.cmd.colorscheme "tokyodark"
+vim.diagnostic.config({ virtual_text = false })
+
+vim.cmd[[colorscheme tokyonight-storm]]
