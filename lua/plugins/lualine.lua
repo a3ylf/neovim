@@ -33,12 +33,7 @@ return {
                             hint = 'H: ',
                             info = 'I: ',
                         },
-                        diagnostics_color = {
-                           error = 'DiagnosticError',
-                            warn  = 'DiagnosticWarn',
-                            info  = 'DiagnosticInfo',
-                            hint  = 'DiagnosticHint',
-                                                    },
+                       
                     },
                 },
 
