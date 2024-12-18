@@ -14,7 +14,7 @@ return {
 		words = { enabled = true },
 		toggle = { enabled = false },
 		terminal = { enabled = false },
-		scratch = { ft = "md" },
+		scratch = { enabled = false },
 		rename = { enabled = false },
 		profiler = { enabled = false },
 		lazygit = {configure = false,},

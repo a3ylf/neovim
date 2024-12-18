@@ -22,5 +22,5 @@ return {
                 open_split = "h",
             },
         })
-    end
+    end,
 }
