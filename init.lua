@@ -19,4 +19,4 @@ require("core")
 
 vim.diagnostic.config({ virtual_text = false })
 
-vim.cmd[[colorscheme tokyonight-storm]]
+vim.cmd[[colorscheme eldritch]]
