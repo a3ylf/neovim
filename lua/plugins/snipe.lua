@@ -2,7 +2,7 @@ return {
     "leath-dub/snipe.nvim",
     keys = {
         {
-            "m",
+            "<Tab>",
             function()
                 require("snipe").open_buffer_menu()
             end,
@@ -16,7 +16,7 @@ return {
                 dictionary = "asdfglwertyuiop",
             },
             navigate = {
-                cancel_snipe = "m",
+                cancel_snipe = "<Tab>",
                 close_buffer = "q",
                 open_vsplit = "v",
                 open_split = "h",
