@@ -4,6 +4,7 @@ return {
         version = false,
         config = function()
             require("mini.surround").setup({})
+            require("mini.pairs").setup({})
             require("mini.comment").setup({
                 mappings = {
                     -- Toggle comment (like `gcip` - comment inner paragraph) for both
@@ -16,6 +17,11 @@ return {
                     -- Define 'comment' textobject (like `dgc` - delete whole comment block)
                     -- Works also in Visual mode if mapping differs from `comment_visual`
                     textobject = "gc",
+                },
+            })
+            require("mini.indentscope").setup({
+                draw = {
+                    delay = 0,
                 },
             })
             require("mini.operators").setup({
