@@ -27,13 +27,6 @@ return {
             sections = {
                 lualine_a = { 'mode' },
                 lualine_b = { {'branch', icon = ""}, 'diff',{'diagnostics',
-                        symbols = {
-                            error = 'E: ',
-                            warn = 'W: ',
-                            hint = 'H: ',
-                            info = 'I: ',
-                        },
-                       
                     },
                 },
 
