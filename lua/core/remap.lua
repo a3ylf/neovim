@@ -12,10 +12,16 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "<leader>y", [["+y]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
-vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, {})
+-- love you telescope
+-- local builtin = require("telescope.builtin")
+-- vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+-- vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
+-- vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, {})
+
+vim.keymap.set("n", "<leader>ff",[[<Cmd>lua require"fzf-lua".files()<CR>]] , {})
+vim.keymap.set("n", "<leader>fa",[[<Cmd>lua require"fzf-lua".files({cwd = "~/"})<CR>]] , {})
+vim.keymap.set("n", "<leader>fo",[[<Cmd>lua require"fzf-lua".oldfiles()<CR>]] , {})
+vim.keymap.set("n", "<leader>fc",[[<Cmd>lua require"fzf-lua".live_grep_native()<CR>]] , {})
 
 -- hovering and seeing info
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
