@@ -21,7 +21,8 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>ff",[[<Cmd>lua require"fzf-lua".files()<CR>]] , {})
 vim.keymap.set("n", "<leader>fa",[[<Cmd>lua require"fzf-lua".files({cwd = "~/"})<CR>]] , {})
 vim.keymap.set("n", "<leader>fo",[[<Cmd>lua require"fzf-lua".oldfiles()<CR>]] , {})
-vim.keymap.set("n", "<leader>fc",[[<Cmd>lua require"fzf-lua".live_grep_native()<CR>]] , {})
+vim.keymap.set("n", "<leader>fl",[[<Cmd>lua require"fzf-lua".live_grep_native()<CR>]] , {})
+vim.keymap.set("n", "<leader>fc",[[<Cmd>lua require"fzf-lua".grep_curbuf()<CR>]] , {})
 
 -- hovering and seeing info
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
