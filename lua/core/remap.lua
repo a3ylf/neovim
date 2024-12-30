@@ -40,10 +40,10 @@ vim.keymap.set("n", "<leader>-", "<CMD>Oil --float<CR>")
 vim.keymap.set("n", "<leader>ger", "iif err != nil {\n  fmt.Println(err)\n}<Esc>") --xd
 vim.keymap.set("n", "<leader>un", vim.cmd.UndotreeToggle)
 
-vim.keymap.set("n", "<leader>of", function()
-	if require("obsidian").util.cursor_on_markdown_link() then
-		return "<cmd>ObsidianFollowLink<CR>"
-	else
-		return "gf"
-	end
-end, { noremap = false, expr = true })
+-- vim.keymap.set("n", "<leader>of", function()
+-- 	if require("obsidian").util.cursor_on_markdown_link() then
+-- 		return "<cmd>ObsidianFollowLink<CR>"
+-- 	else
+-- 		return "gf"
+-- 	end
+-- end, { noremap = false, expr = true })

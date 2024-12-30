@@ -12,7 +12,7 @@ return {
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
                 disabled_filetypes = {
-                    statusline = { "neo-tree", "NvimTree", "undotree", "diff" },
+                    statusline = {"neo-tree", "NvimTree", "undotree", "diff" },
                     winbar = {},
                 },
                 ignore_focus = {},
@@ -45,7 +45,7 @@ return {
                         symbols = {
                             modified = '{+}',
                             readonly = '{-}',
-                            unnamed = '{No Name}',
+                            unnamed = '{}',
                             newfile = '{New}',
                         }
                     },
