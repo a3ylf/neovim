@@ -8,8 +8,9 @@ return {
             },
         },
     },
+    --xd
     {
-        'eandrju/cellular-automaton.nvim'
+        "eandrju/cellular-automaton.nvim",
     },
     {
         "williamboman/mason.nvim",
@@ -19,7 +20,7 @@ return {
                     border = "rounded",
                     icons = {
                         package_installed = "👍",
-                        package_pending = "😴",
+
                         package_uninstalled = "👎",
                     },
                 },
@@ -44,9 +45,19 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
+                automatic_installation = true,
                 ensure_installed = { "lua_ls", "gopls", "clangd", "pyright", "ts_ls" },
             })
         end,
+    },
+
+    --OutputPanel
+    {
+        "mhanberg/output-panel.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("output_panel").setup()
+        end
     },
 
     {
@@ -68,6 +79,29 @@ return {
                         },
                     },
                 },
+            })
+
+            -- lspconfig.lexical.setup({
+            --        cmd = { "/home/apns/.local/share/nvim/mason/bin/lexical", "server" },
+            --        root_dir = require("lspconfig.util").root_pattern { "mix.exs" },
+            --        server_capabilities = {
+            --          completionProvider = vim.NIL,
+            --          definitionProvider = true,
+            --        },
+            --      })
+
+            lspconfig.elixirls.setup({
+                cmd = { "/home/apns/.elixir-ls/release/language_server.sh" },
+                capabilities = capabilities,
+                server_capabilities = {
+                    completionProvider = true,
+                    definitionProvider = true,
+                    documentFormattingProvider = true,
+                },
+            })
+
+            lspconfig.erlangls.setup({
+                capabilities = capabilities,
             })
 
             lspconfig.clangd.setup({
