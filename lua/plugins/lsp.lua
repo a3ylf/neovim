@@ -32,9 +32,9 @@ return {
         config = function()
             require("mason-tool-installer").setup({
                 ensure_installed = {
-                    "black",
-                    "mypy",
-                    "pylint",
+                    -- "black",
+                    -- "mypy",
+                    -- "pylint",
                     "stylua",
                 },
             })
@@ -46,7 +46,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 automatic_installation = true,
-                ensure_installed = { "lua_ls", "gopls", "clangd", "pyright", "ts_ls" },
+                ensure_installed = { "lua_ls", "gopls", "clangd"},
             })
         end,
     },
