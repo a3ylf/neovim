@@ -14,7 +14,7 @@ return {
             ["<Down>"] = { "select_next", "fallback" },
             ["<S-Tab>"] = { "select_prev", "fallback" },
             ["<Up>"] = { "select_prev", "fallback" },
-            ["~~"] = { "accept", "fallback" },
+            ["]"] = { "accept", "fallback" },
         },
         completion = {
             menu = {
